@@ -1,4 +1,5 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from "@react-navigation/native";
+import { Text } from "react-native";
 import {
   Montserrat_300Light,
   Montserrat_400Regular,
@@ -20,10 +21,10 @@ export default function App() {
     Montserrat_600SemiBold,
     Montserrat_700Bold,
   });
-  if (!fontloaded) return "";
+  if (!fontloaded) return <Text>""</Text>;
   return (
     <>
-      <CarListScreen/>
+      <CarListScreen />
     </>
   );
 }

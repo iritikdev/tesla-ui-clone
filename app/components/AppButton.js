@@ -10,14 +10,16 @@ function AppButton({ title, onPress, color = "primary" }) {
       style={[styles.button, { backgroundColor: colors[color] }]}
       onPress={onPress}
     >
-      <Text
-        style={[
-          styles.text,
-          { color: color === "secondary" ? colors.grey : colors.white },
-        ]}
-      >
-        {title}
-      </Text>
+      {title && (
+        <Text
+          style={[
+            styles.text,
+            { color: color === "secondary" ? colors.grey : colors.white },
+          ]}
+        >
+          {title}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 }
